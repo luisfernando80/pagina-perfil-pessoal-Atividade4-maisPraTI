@@ -1,0 +1,609 @@
+@import url(./reset.css);
+
+/* variaveis */
+
+:root {
+  --bg: #f4f4f4;
+  --cor-fonte-principal: #001f3b;
+  --cor-hover-links: #0077b5;
+}
+
+/* HEADER */
+
+.header-secao {
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg);
+  backdrop-filter: blur(0.5rem);
+  box-shadow: 0.2rem 0px 0.8rem 0.3rem rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.6rem 3rem;
+  max-width: 120rem;
+  height: 7rem;
+  margin: 0 auto;
+}
+
+.logo-header {
+  width: 5rem;
+  height: 5rem;
+  & img {
+    max-width: 100%;
+  }
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 600;
+
+  &:hover {
+    color: var(--cor-hover-links);
+  }
+}
+
+/* MENU-HAMBURGUER */
+
+.menu-hamb {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+
+  & img {
+    max-width: 100%;
+  }
+}
+
+/* BOTAO FECHAR */
+
+.btn-fechar {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  & img {
+    max-width: 100%;
+  }
+}
+
+/* MEDIA QUERIES HEADER */
+
+@media screen and (max-width: 600px) {
+  nav {
+    display: none;
+  }
+
+  /* menu hamburguer */
+  .menu-hamb {
+    display: block;
+  }
+
+  .aberto {
+    & nav {
+      position: absolute;
+      top: 8rem;
+      right: 1.1rem;
+      display: flex;
+      background-color: #fff;
+      padding: 1.6rem 3rem;
+      border-radius: 0.6rem;
+      box-shadow: 0 0 6px 4px rgba(0, 0, 0, 0.1);
+
+      & ul {
+        align-items: flex-end;
+        flex-direction: column;
+      }
+    }
+
+    .menu-hamb {
+      display: none;
+    }
+
+    .btn-fechar {
+      display: block;
+    }
+  }
+}
+
+/* SECAO HERO */
+
+.hero-secao {
+  display: flex;
+  background-color: var(--bg);
+}
+
+.hero-container {
+  display: flex;
+  gap: 4.5rem;
+  align-items: center;
+  color: inherit;
+}
+
+.hero-container .primeira-coluna {
+  max-width: 50rem;
+  & h1 {
+    margin-bottom: 2rem;
+  }
+}
+
+.hero-container .paragrafos p {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.hero-container img {
+  border: 0.5rem solid #fff;
+  width: 15rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.9rem 0.4rem rgba(0, 0, 0, 0.1);
+}
+
+/* MEDIA QUERIES SECAO HERO */
+
+@media screen and (max-width: 600px) {
+  .hero-container {
+    flex-flow: column-reverse;
+    gap: 3rem;
+  }
+
+  .primeira-coluna h1 {
+    text-align: center;
+    font-size: 2.2rem;
+  }
+}
+
+/* SECAO HABILIDADES */
+
+.habilidades-secao {
+  background-color: #fff;
+}
+
+.habilidades-container h2 {
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  gap: 1.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-auto-rows: 10rem;
+}
+
+.card {
+  background-color: var(--bg);
+
+  border: 1px solid #001f3b25;
+  border-radius: 0.5rem;
+  place-content: center;
+  text-align: center;
+  & img {
+    max-width: 60%;
+    max-height: 60%;
+  }
+
+  &.html:hover {
+    box-shadow: -0.2rem 0.2rem 0.4rem 0 #e65100;
+    border: 0;
+  }
+
+  &.css:hover {
+    box-shadow: -0.2rem 0.2rem 0.4rem 0 #039be5;
+    border: 0;
+  }
+
+  &.js:hover {
+    box-shadow: -0.2rem 0.2rem 0.4rem 0 #ffd600;
+    border: 0;
+  }
+
+  &.git:hover {
+    box-shadow: -0.2rem 0.2rem 0.4rem 0 #f4511e;
+    border: 0;
+  }
+
+  &.sass:hover {
+    box-shadow: -0.2rem 0.2rem 0.4rem 0 #f06292;
+    border: 0;
+  }
+
+  &.boot:hover {
+    box-shadow: -0.2rem 0.2rem 0.4rem 0 #7c4dff;
+    border: 0;
+  }
+
+  &.tailwind:hover {
+    box-shadow: -0.2rem 0.2rem 0.4rem 0 #00acc1;
+    border: 0;
+  }
+
+  &.figma:hover {
+    box-shadow: -0.2rem 0.2rem 0.4rem 0 #66bb6a;
+    border: 0;
+  }
+}
+
+/* MEDIAS QUERIE HABILIDADE */
+
+/* @media screen and (max-width: 600px) {
+  .habilidades-container {
+    mask: linear-gradient(to right, transparent, red 10%, red 90%, transparent);
+  }
+
+  .habilidades-container h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .cards {
+    grid-auto-columns: 20rem;
+    grid-auto-flow: column;
+    width: max-content;
+    animation: scrollInfinite 10s linear infinite;
+  }
+
+  @keyframes scrollInfinite {
+    to {
+      translate: calc(-50% - 0.8rem);
+    }
+  }
+} */
+
+/* SEÇÃO PROJETOS */
+
+.projetos-secao {
+}
+
+.projetos-container h2 {
+  margin-bottom: 2rem;
+}
+
+.blocos {
+  display: grid;
+  gap: 2.8rem;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+}
+
+.bloco {
+  display: grid;
+  gap: 1rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+
+  & .image-projeto {
+    max-width: 100%;
+    height: 25rem;
+
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &.projeto01 {
+      background-image: url(./../images/01-project-landingpage-alura.webp);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &.projeto02 {
+      background-position: top;
+      background-image: url(../images/02-project-pageYoutube-dio.webp);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &.projeto03 {
+      background-image: url(../images/03-project-pagCaptura-hashtag.webp);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &.projeto04 {
+      background-image: url(../images/04-project-pageDiscord-dio.webp);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 9px 4px rgba(0, 0, 0, 0.095);
+  }
+}
+
+.descricao-legenda {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.28rem;
+
+  & p {
+    font-size: 1.4rem;
+  }
+
+  & a {
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  & img {
+    max-width: 3rem;
+  }
+}
+
+.texto-legenda {
+  display: flex;
+  flex-flow: column;
+  gap: 0.6rem;
+}
+
+/* MEDIA QUERIE PROJETOS */
+
+/* @media screen and (max-width: 600px) {
+  .projetos-container h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+} */
+
+/* SECAO CONTATO */
+
+.contato-secao {
+  background-color: #fff;
+}
+
+.contato-container {
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  gap: 1rem;
+}
+
+.logo-contato {
+  justify-self: center;
+  & img {
+    width: 5rem;
+  }
+}
+
+.fale-conosco {
+  & h3 {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.bloco-contato {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.5rem;
+
+  & img {
+    width: 2.5rem;
+  }
+
+  & a {
+    font-size: 1.4rem;
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover {
+      color: var(--cor-hover-links);
+    }
+  }
+  & p {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  max-width: 30rem;
+  width: 100%;
+  justify-self: center;
+}
+
+.inputs {
+  display: flex;
+  flex-flow: column;
+  gap: 1.6rem;
+}
+
+.input {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+
+  & label {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+
+  & input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    color: var(--cor-fonte-principal);
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #ccc;
+      font-size: 1.4rem;
+      font-family: "MontSerrat", sans-serif;
+    }
+  }
+}
+
+textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  height: 18rem;
+  color: var(--cor-fonte-principal);
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    font-size: 1.4rem;
+    color: #ccc;
+    font-family: "MontSerrat", sans-serif;
+  }
+}
+
+.btn-enviar {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--cor-fonte-principal);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 2rem;
+  max-width: max-content;
+  align-self: center;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  margin-top: 1.6rem;
+
+  &:hover {
+    background-color: var(--cor-hover-links);
+  }
+}
+
+/* MEDIA QUERIE CONTATO */
+
+@media screen and (max-width: 600px) {
+  .contato-secao {
+    padding: 6rem 2.5rem;
+  }
+
+  .contato-container {
+    border-radius: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 4rem;
+    box-shadow: inset 0 0 9px 3px rgba(0, 0, 0, 0.15);
+  }
+
+  .fale-conosco {
+    & h3 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .form {
+    grid-column: 1 / span 2;
+    justify-self: center;
+  }
+
+  .input {
+    & label {
+      font-size: 1.6rem;
+    }
+
+    & input {
+      &::placeholder {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  textarea {
+    &::placeholder {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+/* FOOTER */
+
+footer {
+  z-index: 1;
+  position: sticky;
+  background-color: var(--cor-fonte-principal);
+}
+
+footer .container {
+  color: #fff;
+  text-align: center;
+  padding: 1.8rem 2.4rem;
+  font-size: 1.4rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.logos-redes-sociais {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo-rede {
+  display: grid;
+  place-items: center;
+  max-width: 3rem;
+  max-height: 3rem;
+  border-radius: 50%;
+  padding: 0.7rem;
+
+  & img {
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: var(--cor-hover-links);
+  }
+}
+
+/* LINK WHATSAPP */
+
+.link-whatsapp {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+
+  & img {
+    width: 7rem;
+  }
+
+  &:hover {
+    transform: translate(0.5rem, 0.5rem);
+  }
+}

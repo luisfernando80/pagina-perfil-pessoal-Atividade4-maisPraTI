@@ -1,0 +1,29 @@
+/* FONTE MONTSERRAT */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "MontSerrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: var(--cor-fonte-principal);
+  background-color: var(--bg);
+}
+
+.container {
+  max-width: 100rem;
+  padding: 6rem 3rem;
+  margin: 0 auto;
+}
