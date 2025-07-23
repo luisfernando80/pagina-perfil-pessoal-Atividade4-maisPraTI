@@ -4,6 +4,7 @@
 
 :root {
   --bg: #f4f4f4;
+  --bg-header-transparent: #ffffffda;
   --cor-fonte-principal: #001f3b;
   --cor-hover-links: #0077b5;
 }
@@ -16,7 +17,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--bg);
+  background-color: var(--bg-header-transparent);
   backdrop-filter: blur(0.5rem);
   box-shadow: 0.2rem 0px 0.8rem 0.3rem rgba(0, 0, 0, 0.1);
 }
