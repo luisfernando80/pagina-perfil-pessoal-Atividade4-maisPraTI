@@ -357,12 +357,18 @@ nav ul a {
 
 /* MEDIA QUERIE PROJETOS */
 
-/* @media screen and (max-width: 600px) {
-  .projetos-container h2 {
+@media screen and (max-width: 600px) {
+  /* .projetos-container h2 {
     text-align: center;
     margin-bottom: 4rem;
+  } */
+
+  .descricao-legenda {
+    & img {
+      max-width: 2.5rem;
+    }
   }
-} */
+}
 
 /* SECAO CONTATO */
 
