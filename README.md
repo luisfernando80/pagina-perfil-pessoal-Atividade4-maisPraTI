@@ -14,6 +14,9 @@ Este projeto desenvolvi para aplicar o que aprendi até o momento na **Formaçã
   - **Favicon:** Coloquei a logo no favicon para mostrar a minha marca.
   - **Link WhatsApp:** Deixei fixado no final da tela o icone do WhatsApp que ao clicar direciona para o meu contato.
 
+#### Obs: 
+  - **Formulário:** Na seção Contato existe a tag `<form> ` foi visto em aula, por isso coloquei no projeto para reforçar e fixar o conteúdo, porém ainda sem funcionalidade, em breve irei implementar e deixar ele funcionando. 
+
 <hr/>
 
 Contato, <br/>
