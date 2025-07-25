@@ -15,6 +15,14 @@ html {
   scroll-padding-top: 7rem;
 }
 
+/* MEDIA QUERIE HTML */
+
+@media screen and (max-width: 600px) {
+  html {
+    scroll-padding-top: 4rem;
+  }
+}
+
 body {
   font-family: "MontSerrat", sans-serif;
   font-size: 1.6rem;
